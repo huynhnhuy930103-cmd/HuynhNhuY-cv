@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huỳnh Như Ý - Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f3f4f6;
+      color: #333333;
+      line-height: 1.4;
+      padding: 20px;
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      display: flex;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      width: 32%;
+      background-color: #f8fafc;
+      border-right: 1px solid #e2e8f0;
+      padding: 24px 20px;
+    }
+
+    .profile-img-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .sidebar-section {
+      margin-bottom: 20px;
+    }
+
+    .sidebar-heading {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    .contact-item {
+      font-size: 8.5pt;
+      margin-bottom: 8px;
+      color: #334155;
+      word-break: break-word;
+    }
+
+    .contact-label {
+      font-weight: bold;
+      color: #0f172a;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .skill-category {
+      margin-bottom: 10px;
+    }
+
+    .skill-title {
+      font-size: 9pt;
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 3px;
+    }
+
+    .skill-list {
+      list-style-type: disc;
+      padding-left: 16px;
+      font-size: 8.5pt;
+      color: #334155;
+    }
+
+    .skill-list li {
+      margin-bottom: 3px;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+      width: 68%;
+      padding: 28px 24px;
+    }
+
+    .header {
+      margin-bottom: 20px;
+    }
+
+    .candidate-name {
+      font-size: 20pt;
+      font-weight: bold;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .candidate-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #2563eb;
+      text-transform: uppercase;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .main-section {
+      margin-bottom: 20px;
+    }
+
+    .section-heading {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    .objective-text {
+      font-size: 9pt;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .project-item {
+      margin-bottom: 16px;
+    }
+
+    .project-title {
+      font-size: 10pt;
+      font-weight: bold;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+
+    .project-meta {
+      font-size: 8.5pt;
+      color: #64748b;
+      margin: 2px 0 4px 0;
+    }
+
+    .project-tech {
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 16px;
+      font-size: 8.5pt;
+      color: #334155;
+      line-height: 1.4;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4px;
+    }
+
+    .github-link {
+      font-size: 8.5pt;
+      font-weight: bold;
+      color: #0f172a;
+      margin-top: 6px;
+    }
+
+    .github-link a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .github-link a:hover {
+      text-decoration: underline;
+    }
+
+    .edu-item {
+      margin-bottom: 8px;
+    }
+
+    .edu-school {
+      font-size: 9.5pt;
+      font-weight: bold;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+
+    .edu-major {
+      font-size: 8.5pt;
+      color: #334155;
+      margin-top: 2px;
+    }
+
+    .edu-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5pt;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .footer {
+      font-size: 8pt;
+      color: #94a3b8;
+      margin-top: 24px;
+      padding-top: 8px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .resume-container {
+        flex-direction: column;
+      }
+      .sidebar, .main-content {
+        width: 100%;
+      }
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <div class="profile-img-container">
+      <img class="profile-img" src="z7989170871145_e60b9a4fc5a846735fd0cc8b750c3ba1.jpg" alt="Huỳnh Như Ý">
+    </div>
+
+    <section class="sidebar-section">
+      <h2 class="sidebar-heading">CONTACT</h2>
+      <div class="contact-item">
+        <span class="contact-label">Phone:</span>
+        0356930103
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Email:</span>
+        huynhnhuy930103@gmail.com
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Location:</span>
+        Thu Duc City, Ho Chi Minh City, Vietnam
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2 class="sidebar-heading">SKILLS</h2>
+
+      <div class="skill-category">
+        <div class="skill-title">Front-End</div>
+        <ul class="skill-list">
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-title">Back-End</div>
+        <ul class="skill-list">
+          <li>PHP, Laravel</li>
+          <li>Java, Spring Boot</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-title">Database</div>
+        <ul class="skill-list">
+          <li>MySQL</li>
+          <li>Basic SQL &amp; relationships</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-title">Tools</div>
+        <ul class="skill-list">
+          <li>Git &amp; GitHub</li>
+          <li>Postman</li>
+          <li>XAMPP</li>
+          <li>Visual Studio Code</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-title">Soft Skills</div>
+        <ul class="skill-list">
+          <li>Technical documentation research</li>
+          <li>Teamwork &amp; adaptability</li>
+          <li>Microsoft Office (Word, Excel, PPT)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2 class="sidebar-heading">INTERESTS</h2>
+      <ul class="skill-list">
+        <li>Traveling</li>
+        <li>Cooking</li>
+        <li>Watching movies</li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- RIGHT MAIN CONTENT -->
+  <main class="main-content">
+    <header class="header">
+      <h1 class="candidate-name">HUỲNH NHƯ Ý</h1>
+      <div class="candidate-title">WEB DEVELOPER INTERN</div>
+    </header>
+
+    <section class="main-section">
+      <h2 class="section-heading">CAREER OBJECTIVE</h2>
+      <p class="objective-text">
+        Information Technology student seeking a Web Developer Internship to apply my knowledge of front-end and back-end web development, databases, and system analysis. I am eager to gain practical experience, improve my technical skills, and contribute to real-world projects in a professional working environment.
+      </p>
+    </section>
+
+    <section class="main-section">
+      <h2 class="section-heading">PROJECT EXPERIENCE</h2>
+
+      <!-- Project 1 -->
+      <article class="project-item">
+        <h3 class="project-title">FRUIT SHOP - E-COMMERCE WEBSITE</h3>
+        <div class="project-meta">Front-End Developer | Personal Project | 02/2026-04/2026</div>
+        <div class="project-tech">Technologies: HTML, CSS, JavaScript</div>
+        <ul class="bullet-list">
+          <li>Designed a user-friendly e-commerce website with a focus on user experience.</li>
+          <li>Developed product listing and product detail pages.</li>
+          <li>Implemented product search and filtering functionality.</li>
+          <li>Developed shopping cart features, including adding, updating, and removing products.</li>
+          <li>Implemented automatic calculation of the total order value.</li>
+          <li>Created and validated contact, registration, and login forms.</li>
+        </ul>
+        <div class="github-link">
+          GitHub: <a href="https://github.com/huynhnhuy930103-cmd/fruit-shop-frontend" target="_blank">github.com/huynhnhuy930103-cmd/fruit-shop-frontend</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-item">
+        <h3 class="project-title">FRUIT SHOP - WEB APPLICATION &amp; RESTFUL API</h3>
+        <div class="project-meta">Web Developer | Academic Project</div>
+        <div class="project-tech">Technologies: Laravel, PHP, MySQL, RESTful API, Git/GitHub</div>
+        <ul class="bullet-list">
+          <li>Developed a fruit-selling web application using Laravel.</li>
+          <li>Designed and managed MySQL database tables for product and category management.</li>
+          <li>Developed RESTful API endpoints for category and product-related operations.</li>
+          <li>Implemented CRUD operations and data validation.</li>
+          <li>Applied Laravel MVC architecture with Models, Controllers, Requests, and API Resources.</li>
+        </ul>
+        <div class="github-link">
+          GitHub: <a href="https://github.com/huynhnhuy930103-cmd/Ltw2" target="_blank">github.com/huynhnhuy930103-cmd/Ltw2</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="main-section">
+      <h2 class="section-heading">EDUCATION</h2>
+      <div class="edu-item">
+        <div class="edu-school">HO CHI MINH CITY INDUSTRY AND TRADE COLLEGE</div>
+        <div class="edu-major">Major: Information Technology</div>
+        <div class="edu-details">
+          <span>Second-year student</span>
+          <span>09/2024-Present</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Huỳnh Như Ý - Web Developer Intern
+    </footer>
+  </main>
+</div>
+
+</body>
+</html>
